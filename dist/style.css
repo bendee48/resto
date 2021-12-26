@@ -59,6 +59,10 @@ select {
 
 /* Main Styling */
 
+body {
+  font-family: cursive;
+}
+
 main {
   display: flex;
   justify-content: center;
