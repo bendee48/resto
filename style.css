@@ -15,7 +15,8 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul {
   margin: 0;
 }
 
@@ -75,4 +76,16 @@ p {
   font-size: 3em;
   font-weight: 700;
   text-shadow: white 0 0 15px;
+}
+
+/* Nav */
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: blueviolet;
+}
+
+ul li {
+  display: inline-block;
 }
