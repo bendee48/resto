@@ -1,11 +1,12 @@
 const pageLoadModule = (()=> {
   const run = () => {
-    const content = document.querySelector('#content');
-    const main = document.createElement('main');
+    const pageContent = document.querySelector('#content');
+    const header = document.createElement('h1');
     const text = document.createElement('p');
-    text.innerText = "Banging Food for Banging People...no wait"
-    content.appendChild(main);
-    main.appendChild(text);
+    header.innerText = "Banger's";
+    text.innerText = "Banging Food for Banging People...no wait";
+    pageContent.appendChild(header);
+    pageContent.appendChild(text);
   }
   
   return { run }
