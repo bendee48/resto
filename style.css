@@ -82,6 +82,12 @@ p {
   text-shadow: white 0 0 15px;
 }
 
+h1 {
+  font-size: 4em;
+  color: #fff;
+  text-shadow: #000 0 0 15px;
+}
+
 /* Nav */
 
 nav {
