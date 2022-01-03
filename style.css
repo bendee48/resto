@@ -109,3 +109,11 @@ ul li {
   display: inline-block;
   cursor: pointer;
 }
+
+/* Home Content */
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
