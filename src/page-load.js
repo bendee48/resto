@@ -5,6 +5,7 @@ const pageLoadModule = (()=> {
     const text = document.createElement('p');
     header.innerText = "Banger's";
     text.innerText = "Banging Food for Banging People...no wait";
+    pageContent.classList.add('home-content');
     pageContent.appendChild(header);
     pageContent.appendChild(text);
   }

@@ -11,6 +11,7 @@ home.addEventListener('click', showHomePage);
 
 function clearContent() {
   content.innerHTML = null;
+  content.className = '';
 }
 
 function showHomePage() {
