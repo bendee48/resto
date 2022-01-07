@@ -19,3 +19,5 @@ Looking at Webpack by building a simple restaurant site (via the [Odin Project](
   - CSS
   - JavaScript
   - Webpack
+
+  [Live Version](https://bendee48.github.io/resto/)
