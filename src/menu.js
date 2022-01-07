@@ -17,6 +17,21 @@ const loadMenuPage = (()=> {
     { name: 'Broken Glass Cake', desc: "We found these outside. Fairly certain it's not real glass", price: "$4.99", url: 'glass.jpg'},
   ]
 
+  const description = (item)=> {
+    return `
+            <div class="pic-box-inner">
+              <div class="pic-box-front">
+                <img src="images/${item.url}">
+              </div>
+              <div class="pic-box-back">
+                <p>${item.name}</p>
+                <p>${item.desc}</p>
+                <p>${item.price}</p>
+              </div>
+            </div>
+          `
+  }
+
   function run() {
     const pageContent = document.querySelector('#content');
     const menuContent = document.createElement('div');
@@ -26,18 +41,7 @@ const loadMenuPage = (()=> {
     menuContent.appendChild(starterHeader);
 
     starterItems.forEach(item => {
-      const content = `
-          <div class="pic-box-inner">
-            <div class="pic-box-front">
-              <img src="images/${item.url}">
-            </div>
-            <div class="pic-box-back">
-              <p>${item.name}</p>
-              <p>${item.desc}</p>
-              <p>${item.price}</p>
-            </div>
-          </div>
-      `
+      const content = description(item);
       const picBox = document.createElement('div')
       picBox.classList.add('pic-box');
       picBox.innerHTML = content;
@@ -50,18 +54,7 @@ const loadMenuPage = (()=> {
     menuContent.appendChild(mainHeader);
 
     mainItems.forEach(item => {
-      const content = `
-          <div class="pic-box-inner">
-            <div class="pic-box-front">
-              <img src="images/${item.url}">
-            </div>
-            <div class="pic-box-back">
-              <p>${item.name}</p>
-              <p>${item.desc}</p>
-              <p>${item.price}</p>
-            </div>
-          </div>
-      `
+      const content = description(item);
       const picBox = document.createElement('div')
       picBox.classList.add('pic-box');
       picBox.innerHTML = content;
@@ -74,24 +67,12 @@ const loadMenuPage = (()=> {
     menuContent.appendChild(dessertHeader);
 
     dessertItems.forEach(item => {
-      const content = `
-          <div class="pic-box-inner">
-            <div class="pic-box-front">
-              <img src="images/${item.url}">
-            </div>
-            <div class="pic-box-back">
-              <p>${item.name}</p>
-              <p>${item.desc}</p>
-              <p>${item.price}</p>
-            </div>
-          </div>
-      `
+      const content = description(item);
       const picBox = document.createElement('div')
       picBox.classList.add('pic-box');
       picBox.innerHTML = content;
       menuContent.appendChild(picBox);
     });
-
 
     menuContent.classList.add('menu-content');
     pageContent.appendChild(menuContent);
