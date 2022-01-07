@@ -20,6 +20,12 @@ ul {
   margin: 0;
 }
 
+/* Remove Default Padding */
+
+ul {
+  padding: 0;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
@@ -33,6 +39,8 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -60,40 +68,51 @@ select {
 
 /* Main Styling */
 
+:root {
+  --copper-crayola: rgb(233, 157, 124);
+  --tuscany: #bb999cff;
+  --blue-bell: #9999c3ff;
+  --cornflower-blue: #7b8cdeff;
+  --powder-blue: #c0e6deff;
+}
+
 body {
-  font-family: cursive;
+  font-family: Calibri, sans-serif;
 }
 
 main {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   text-align: center;
-  background: url(./images/resto.jpg) center / 100% no-repeat;
+  background: url(./images/resto.jpg) top / 100% repeat;
 }
 
-p {
-  color: black;
-  font-size: 3em;
-  font-weight: 700;
-  text-shadow: white 0 0 15px;
+@media (max-width: 360px) {
+  main {
+    background: url(./images/resto.jpg) center repeat;
+  }
 }
 
-h1 {
+small {
+  font-size: .8em;
+}
+
+h1, h2, h3, h4 {
   font-size: 4em;
-  color: #fff;
-  text-shadow: #000 0 0 15px;
+  text-shadow: rgb(160, 160, 160) 0 0 15px;
 }
 
 #content {
   width: 90%;
   height: 80%;
-  padding: 0 2em;
-  border-radius: 10px;
-  background: bisque;
+  margin: 2em 0;
+  border-radius: 20px;
+  background: var(--copper-crayola);
   opacity: .9;
 }
 
@@ -102,12 +121,18 @@ h1 {
 nav {
   display: flex;
   justify-content: center;
-  background: blueviolet;
+  background: var(--tuscany);
 }
 
 ul li {
   display: inline-block;
+  padding: .5em 1em;
   cursor: pointer;
+}
+
+ul li:hover {
+  color: white;
+  background-color: rgb(165, 128, 131);
 }
 
 /* Home Content */
@@ -116,6 +141,21 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 4em 2em;
+}
+
+.home-content h1 {
+  font-size: 4em;
+}
+
+@media (max-width: 360px) {
+  .home-content h1 {
+    font-size: 3em;
+  }
+}
+
+.home-content p {
+  font-size: 2em;
 }
 
 /* Menu Content */
@@ -125,6 +165,13 @@ ul li {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1em;
+  padding: 2em 2em;
+}
+
+@media (max-width: 360px) {
+  .menu-content {
+    padding: 0 1em;
+  }
 }
 
 /* Menu Headers */
@@ -132,14 +179,16 @@ ul li {
 .header {
   grid-column: 1 / -1;
   justify-self: start;
+  font-size: 3em;
 }
 
 /* Pic Box */
 
 .pic-box {
   width: 100%;
-  height: 200px;
+  height: 165px;
   perspective: 2000px;
+  cursor: pointer;
 }
 
 .pic-box p {
@@ -174,11 +223,46 @@ ul li {
   display: grid;
   align-items: center;
   transform: rotateY(180deg);
-  background-color: #aaa;
+  font-weight: 700;
+  background-color: var(--cornflower-blue);
 }
 
 img {
   width: 100%;
   height: 100%;
 }
+
+/* Contact Content */
+
+.contact-content {
+  padding: 2em;
+}
+
+.contact-content h1 {
+  font-size: 3em;
+}
+
+@media (max-width: 400px) {
+  .contact-content h1 {
+    font-size: 2em;
+  }
+}
+
+.contact-content h2, h3, h4 {
+  font-size: 1.5em;
+}
+
+.contact-content address {
+  font-size: 1.2em;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  background-color: var(--blue-bell);
+}
+
+
+
 

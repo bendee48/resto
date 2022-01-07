@@ -8,7 +8,7 @@ const loadMenuPage = (()=> {
   const mainItems = [
     { name: 'Hamster', desc: "Skittle stuffed Hamster", price: "99c", url: 'hamster.jpg'},
     { name: 'Lime Roasted Pork', desc: "Roasted pork with a lime jus", price: "$19.99", url: 'pork.jpg'},
-    { name: 'Dunno', desc: "We're not sure what this is. Looks okay though", price: "$239.79", url: 'dunno.jpg'},
+    { name: 'Dunno', desc: "We're not sure what this is. Smells alright though", price: "$239.79", url: 'dunno.jpg'},
     { name: 'Vegetable Bake', desc: "Bursting with delicious veggies and sunshine", price: "$6.99", url: 'veg_cake.jpg'},
   ];
 

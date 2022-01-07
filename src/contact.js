@@ -2,6 +2,7 @@ const loadContactPage = (()=> {
   const run = () => {
     const pageContent = document.querySelector('#content');
     const contactContent = document.createElement('div');
+    contactContent.classList.add('contact-content');
     const content = `
       <h1>Contact Page</h1>
       <h2>Email</h2>
@@ -10,9 +11,9 @@ const loadContactPage = (()=> {
       <address>01724 647583920</address>
       <h4>Banger's Head Office</h4>
       <address>
-        124 Banger's Street
-        Bangerton
-        New Bangershire
+        124 Banger's Street,
+        Bangerton,
+        New Bangershire,
         BNG 123
       </address>
     `;
