@@ -145,10 +145,11 @@ ul li:hover {
 }
 
 .home-content h1 {
-  font-size: 4em;
+  font-size: 5em;
+  font-family: 'Kanit', Calibri, cursive;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 500px) {
   .home-content h1 {
     font-size: 3em;
   }
